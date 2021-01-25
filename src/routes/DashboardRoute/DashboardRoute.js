@@ -4,18 +4,18 @@ import ApiService from "../../services/auth-api-service";
 import Button from "../../components/Button/Button";
 
 class DashboardRoute extends Component {
-  state = {
-    error: null,
-    language: "",
-    score: 0,
-    wordsPractice: "",
-  };
-
   static defaultProps = {
     location: {},
     history: {
       push: () => {},
     },
+  };
+
+  state = {
+    error: null,
+    language: "",
+    score: 0,
+    wordsPractice: "",
   };
 
   componentDidMount() {
@@ -51,7 +51,7 @@ class DashboardRoute extends Component {
     return (
       <section className="dashboard">
         <h2 className="language">You are learning {language}</h2>
-        <p className="score">Total correct answers: {score}</p>
+        <p className="DisplayScore">Total correct answers: {score}</p>
         <div role="alert" className="alert">
           {error && <p>{error}</p>}
         </div>
