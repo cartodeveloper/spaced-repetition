@@ -85,10 +85,13 @@ main {
   padding: 10px;
 }
 
-.results h2 {
+.results h2,
+footer {
   margin: 50px;
 }
-
+footer {
+  font-size: smaller;
+}
 /*Destopk Style*/
 
 @media all and (min-width: 800px) {
