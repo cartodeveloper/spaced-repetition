@@ -83,7 +83,7 @@ class LearningRoute extends Component {
   renderNextWord = () => {
     const { nextWord, incorrect, correct, score } = this.state;
     return (
-      <section className="word-translation">
+      <section className="learning">
         <h2>Translate the word:</h2>
         <p className="DisplayScore">Your total score is: {score}</p>
         <span className="word-main">{nextWord}</span>
@@ -99,12 +99,14 @@ class LearningRoute extends Component {
           ></Input>
           <Button type="submit">Submit your answer</Button>
         </form>
-        <p className="correct">
-          You have answered this word correctly {correct} times.
-        </p>
-        <p className="incorrect">
-          You have answered this word incorrectly {incorrect} times.
-        </p>
+        <div className="words-flex">
+          <p className="correct">
+            You have answered this word correctly {correct} times.
+          </p>
+          <p className="incorrect">
+            You have answered this word incorrectly {incorrect} times.
+          </p>
+        </div>
       </section>
     );
   };
@@ -117,14 +119,14 @@ class LearningRoute extends Component {
           <h2>
             You were correct!{" "}
             <span role="img" aria-label="happy">
-              😆
+              🥳 <img src="/images/correct-icon.png" alt="correct-icon" />
             </span>
           </h2>
         ) : (
           <h2>
             Wrong answer, try again...
             <span role="img" aria-label="sad">
-              🤔
+              🤔 <img src="/images/incorrect-icon.png" alt="incorrect-icon" />
             </span>
           </h2>
         )}
@@ -133,7 +135,7 @@ class LearningRoute extends Component {
           <b>{translation}</b>
           and your answer was: <em> {guess}</em>!
         </p>
-        <p className="DisplayScore">Your total score is:{score}</p>
+        <p className="DisplayScore">Your total score is: {score}</p>
         <Button onClick={this.handleNextWord}>More Words</Button>
       </section>
     );

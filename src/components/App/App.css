@@ -3,17 +3,18 @@ main {
 }
 
 .dashboard h2,
-.DisplayScore {
+.DisplayScore,
+.dashboard h3 {
   padding: 10px;
   margin: 15px;
 }
-.words-flex img {
+.words-flex img,
+.results img {
   width: 20px;
 }
 
 .dashboard h3 {
   background-color: white;
-  padding: 10px;
   border-radius: 5px;
 }
 .DisplayScore {
@@ -22,6 +23,7 @@ main {
   border-radius: 4px;
   font-size: large;
   color: white;
+  margin: 40px;
 }
 
 .words-flex {
@@ -30,7 +32,8 @@ main {
   justify-content: center;
   margin: 20px;
 }
-
+.words-flex .correct,
+.words-flex .incorrect,
 .words-flex li {
   flex: 1;
   margin: 10px;
@@ -39,20 +42,51 @@ main {
   padding: 20px;
 }
 
+.words-flex .correct {
+  background-color: rgba(236, 255, 221, 0.562);
+}
+.words-flex .incorrect {
+  background-color: rgba(253, 227, 227, 0.562);
+}
+
 .banner {
   background: url("../../images/words-abstract.png") no-repeat;
   background-size: cover;
   height: 500px;
 }
 
-.word-original {
+.word-main {
+  background-color: rgba(248, 223, 248, 0.562);
+  padding: 20px;
+  text-transform: uppercase;
+}
+.learning form {
+  margin: 30px;
+}
+.word-original,
+.results .feedback b,
+.results .feedback em {
   background-color: #c06ba7cc;
   padding: 10px;
   text-transform: uppercase;
 }
 
+.results .feedback b,
+.results .feedback em {
+  background-color: rgba(248, 223, 248, 0.562);
+}
+.results .feedback {
+  padding: 10px;
+  margin: 35px;
+  line-height: 2.5;
+}
+
 .correct-guess {
   padding: 10px;
+}
+
+.results h2 {
+  margin: 50px;
 }
 
 /*Destopk Style*/
@@ -60,8 +94,5 @@ main {
 @media all and (min-width: 800px) {
   .words-flex {
     flex-direction: row;
-  }
-  .banner {
-    height: 700px;
   }
 }
