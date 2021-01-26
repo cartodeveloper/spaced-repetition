@@ -85,7 +85,6 @@ class LearningRoute extends Component {
     return (
       <section className="learning">
         <h2>Translate the word:</h2>
-        <p className="DisplayScore">Your total score is: {score}</p>
         <span className="word-main">{nextWord}</span>
         <form onSubmit={this.handleGuess} className="answer-form">
           <Label htmlFor="learn-guess-input">
@@ -99,6 +98,7 @@ class LearningRoute extends Component {
           ></Input>
           <Button type="submit">Submit your answer</Button>
         </form>
+        <p className="DisplayScore">Your total score is: {score}</p>
         <div className="words-flex">
           <p className="correct">
             You have answered this word correctly {correct} times.
