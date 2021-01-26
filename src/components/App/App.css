@@ -1,3 +1,67 @@
 main {
   margin-bottom: 30px;
 }
+
+.dashboard h2,
+.DisplayScore {
+  padding: 10px;
+  margin: 15px;
+}
+.words-flex img {
+  width: 20px;
+}
+
+.dashboard h3 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.DisplayScore {
+  text-shadow: none;
+  background-color: #c06ba7cc;
+  border-radius: 4px;
+  font-size: large;
+  color: white;
+}
+
+.words-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.words-flex li {
+  flex: 1;
+  margin: 10px;
+  list-style: none;
+  background-color: rgba(248, 223, 248, 0.562);
+  padding: 20px;
+}
+
+.banner {
+  background: url("../../images/words-abstract.png") no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.word-original {
+  background-color: #c06ba7cc;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.correct-guess {
+  padding: 10px;
+}
+
+/*Destopk Style*/
+
+@media all and (min-width: 800px) {
+  .words-flex {
+    flex-direction: row;
+  }
+  .banner {
+    height: 700px;
+  }
+}

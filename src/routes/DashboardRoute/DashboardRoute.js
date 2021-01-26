@@ -32,10 +32,12 @@ class DashboardRoute extends Component {
       return (
         <li key={word.id}>
           <h4 className="word-original">{word.original}</h4>
-          <p className="correct-guesses">
-            correct answer count: {word.correct_count}
+          <p className="correct-guess">
+            <img src="/images/correct-icon.png" alt="correct-icon" /> correct
+            answer count: {word.correct_count}
           </p>
-          <p className="incorrect-guesses">
+          <p className="incorrect-guess">
+            <img src="/images/incorrect-icon.png" alt="incorrect-icon" />{" "}
             incorrect answer count: {word.incorrect_count}
           </p>
         </li>
@@ -56,6 +58,7 @@ class DashboardRoute extends Component {
           {error && <p>{error}</p>}
         </div>
         <h3>Words to practice</h3>
+        <hr />
         <div className="words-flex">{wordsPractice}</div>
         <Link to="/learn">
           <Button>Start practicing</Button>
