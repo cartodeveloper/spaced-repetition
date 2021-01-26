@@ -94,7 +94,7 @@ footer {
 }
 /*Destopk Style*/
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 1600px) {
   .words-flex {
     flex-direction: row;
   }

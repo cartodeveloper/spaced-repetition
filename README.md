@@ -1,47 +1,51 @@
-# Spaced Repetition Capstone
+# Spaced Repetition
 
-## Setup
+![Spaced-repetition](https://github.com/cartodeveloper/spaced-repetition/blob/main/public/images/spaced-repetition-gif.gif?raw=true)
 
-To setup the application
+![s-p](https://github.com/cartodeveloper/spaced-repetition/blob/main/public/images/sp.png?raw=true)
 
-1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
+## Full Stack App to help people memorize words in Spanish.
 
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
+Spaced repetition is an evidence-based learning technique that is usually performed with flashcards.
 
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
+The SR application assists users in learning multiple foreign languages by using this technique.
 
-## Running project
+The word list is structured in the database using a linked list, with words in Spanish.
 
-This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
+---
 
-## Running the tests
+## 🔗[Live Link](https://spaced-repetition.cartodeveloper.vercel.app/)
 
-This project uses [Cypress IO](https://docs.cypress.io) for integration testing using the Chrome browser.
+## 🔗[API repo](https://github.com/cartodeveloper/spaced-repetition-api)
 
-Cypress has the following expectations:
+---
 
-- You have cypress installed (this is a devDependency of the project)
-- You have your application running at http://localhost:3000.
-  - You can change the address of this expectation in the `./cypress.json` file.
-- Your `./src/config.js` is using http://localhost:8000/api as the `API_ENDPOINT`
+## 💻 Tech Stack
 
-To start the tests run the command:
+- ### Front-End :
+  - React
+  - React Router
+  - CSS
+  - Cypress.io
+  - Jsx
+- ### Back-end:
+  - Node.
+  - Express.
+  - JWT.
+  - Mocha&Chai.
+  - Nodemon.
+  - Supertest.
+  - postgreSQL.
 
-```bash
-npm run cypress:open
-```
+---
 
-On the first run of this command, the cypress application will verify its install. Any other runs after this, the verification will be skipped.
+## 📑API Documentation
 
-The command will open up the Cypress application which reads tests from the `./cypress/integration/` directory. You can then run individual tests by clicking on the file names or run all tests by clicking the "run all tests" button in the cypress GUI.
-
-Tests will assert against your running localhost client application.
-
-You can also start all of the tests in the command line only (not using the GUI) by running the command:
-
-```bash
-npm run cypress:run
-```
-
-This will save video recordings of the test runs in the directory `./cypress/videos/`.
+| Method |        Path         |                                 Purpose |
+| :----- | :-----------------: | --------------------------------------: |
+| POST   |      /api/user      |                       User registration |
+| POST   |      /api/auth      |               Manage user authorization |
+| POST   |   /api/auth/toker   |           Validates username & password |
+| GET    |    /api/language    | Get all the words the user is learning. |
+| GET    | /api/language/head  |                      Get users guesses. |
+| POST   | /api/language/guess |                  Records users guesses. |
