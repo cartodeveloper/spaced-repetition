@@ -35,7 +35,10 @@ The word list is structured in the database using a linked list, with words in S
   - Mocha&Chai.
   - Nodemon.
   - Supertest.
-  - postgreSQL.
+- ### Data Persistence:
+  - PostgreSQL.
+- ### Hosting:
+  - Vercel.
 
 ---
 
