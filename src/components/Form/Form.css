@@ -1,0 +1,27 @@
+.form-container {
+  background-color: rgba(128, 0, 128, 0.26);
+  box-shadow: 5px 10px 8px 10px #888888;
+  margin: 60px;
+  padding: 20px;
+}
+
+.form-container h2 {
+  padding: 15px;
+  text-shadow: 1px 1px 2px pink;
+}
+.form-container label {
+  font-weight: bolder;
+}
+.form-container a {
+  color: black;
+}
+.form-container a:hover {
+  color: #5f0a87;
+}
+
+form input {
+  margin: 5px;
+  border-radius: 3px;
+  padding: 1%;
+  text-align: left;
+}
